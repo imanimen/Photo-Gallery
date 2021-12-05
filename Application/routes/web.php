@@ -20,13 +20,13 @@ Route::get('/users/{id}/{name}', function ($id, $name){
 });
 
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// default route
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 // index
-Route::get('/index',[\App\Http\Controllers\PagesController::class, 'index']);
+Route::get('/',[\App\Http\Controllers\PagesController::class, 'index']);
 
 // about
 Route::get('/about', [\App\Http\Controllers\PagesController::class, 'about']);
@@ -34,12 +34,8 @@ Route::get('/about', [\App\Http\Controllers\PagesController::class, 'about']);
 // services
 Route::get('/services', [\App\Http\Controllers\PagesController::class, 'services']);
 
-
-
-
-
-
-
+// routing
+Route::resource('posts', \App\Http\Controllers\PostsController::class );
 
 
 
