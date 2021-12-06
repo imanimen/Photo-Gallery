@@ -12,6 +12,12 @@
         @include('inc.messages')
         @yield('content')
     </div>
+    <script src="/vendor/ckeditor/ckeditor/ckeditor.js"></script>
+    <script src="/vendor/ckeditor/ckeditor/adapters/jquery.js"></script>
+    <script>
+        $('textarea').ckeditor();
+        // $('.textarea').ckeditor(); // if class is prefered.
+    </script>
 
 </body>
 </html>
