@@ -11,5 +11,6 @@
         </div>
         <hr>
         <small>Written on {{$post->created_at}}</small>
+        <a href="/posts/{{$post->id}} class="></a>
     </div>
 @endsection
