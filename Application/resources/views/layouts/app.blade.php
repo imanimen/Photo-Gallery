@@ -18,6 +18,5 @@
         $('textarea').ckeditor();
         // $('.textarea').ckeditor(); // if class is prefered.
     </script>
-
 </body>
 </html>
