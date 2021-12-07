@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <a class="nav-link btn btn-default mt-4 md-4" href="/posts/create">Create Post</a>
         <h3>Posts</h3>
+        <a class="nav navbar-nav btn-default mt-4 md-4" href="/posts/create">Create Post</a>
         @if(count($posts) > 0)
             @foreach($posts as $post)
                 <div class="well">
