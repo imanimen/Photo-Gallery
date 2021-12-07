@@ -15,13 +15,10 @@
         <div>
             <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
         </div>
-
-        {!!Form::open(['action' => ['App\Http\Controllers\PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+        <br>
+        {!!Form::open(['action' => ['App\Http\Controllers\PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-left'])!!}
                 {{Form::hidden('_method', 'DELETE')}}
                 {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
         {!! Form::close() !!}
-
     </div>
-
-
 @endsection
