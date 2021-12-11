@@ -20,10 +20,9 @@
             <li class="nav-item navbar-nav navbar-right">
                 <a class="nav-link" href="/posts/create">Create Post</a>
             </li>
+            <li class="nav-item navbar-nav navbar-right">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
         </ul>
-
-{{--        <form class="form-inline mt-2 mt-md-0">--}}
-{{--            <input class="form-control mr-sm-12 p-2 ml-7" type="text" placeholder="Search" aria-label="Search">--}}
-{{--        </form>--}}
     </div>
 </nav>
