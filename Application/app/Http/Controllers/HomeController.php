@@ -28,6 +28,5 @@ class HomeController extends Controller
         $user = User::find($user_id);
         //dd($user->posts);
         return view('dashboard')->with('posts', $user->posts);
-        
     }
 }

@@ -20,7 +20,7 @@ class PagesController extends Controller
     public function services(){
         $data = array(
             'title' => 'Services',
-            'services'=> ['API', 'GEEV', 'SERVER', 'API']
+            'services'=> ['API', 'Software', 'Game', 'DevOps']
         );
         return view('pages.services')->with($data);
     }
