@@ -24,7 +24,7 @@
                                     </tr>
                                     @foreach($posts as $post)
                                     <tr>
-                                        <th>{{$posts->title}}</th>
+                                        <th>{{$post->title}}</th>
                                         <th><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a></th>
                                         <th></th>
                                     </tr>
