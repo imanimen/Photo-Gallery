@@ -3,14 +3,19 @@
 @section('content')
     <div class="container mt-4">
         <h3>Edit Post</h3>
-        {!! Form::open(['action' => ['App\Http\Controllers\PostsController@update', $post->id],  'method' => 'POST']) !!}
+        {!! Form::open(['action' => ['App\Http\Controllers\PostsController@update', $post->id],  'method' => 'POST', 'enctype'=>"multipart/form-data"]) !!}
         <div class="form-group">
             {{Form::label('title', 'Title')}}
             {{Form::text('title', $post->title, ['id'=> 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Title'])}}
         </div>
+        <br><br>
         <div class="form-group">
             {{Form::label('body', 'Body')}}
             {{Form::textarea('body', $post->body, ['class' => 'form-control', 'placeholder' => 'Body Text'])}}
+        </div>
+        <br><br>
+        <div class="form-group ">
+            {{Form::file('cover_image')}}
         </div>
         <br>
         {{Form::hidden('_method', 'PUT')}}
