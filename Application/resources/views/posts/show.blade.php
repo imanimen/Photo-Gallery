@@ -10,7 +10,9 @@
             {{$post->body}}
         </div>
         <hr>
-        <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
+        <small>Written on {{$post->created_at}} by {{$post->user->name}}
+            <hr>
+            @if(!Auth::guest())
         <div>
             <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
         </div>
@@ -19,5 +21,6 @@
                 {{Form::hidden('_method', 'DELETE')}}
                 {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
         {!! Form::close() !!}
+        @endif
     </div>
 @endsection
